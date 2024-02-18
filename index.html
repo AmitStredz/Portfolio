@@ -17,13 +17,16 @@
       rel="stylesheet"
       />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
-    <div class="main_wrapper">
-    <header id="navbar" class="">
-      <a href="#home" class="logo ps-1">Stredzz <span>X.</span></a>
+    <div class="main_wrapper" >
+    <header id="navbar" data-aos="zoom-in">
+      <a href="#home" class="logo ps-3 ps-md-5 ">Stredzz <span>X.</span></a>
          
-      <ul class="navbar d-none d-md-flex">
+      <ul class="navbar d-none d-md-flex gap-4">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -31,9 +34,9 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       
-      <div class="top-btn  d-flex justify-content-between">
-        <a href="#contact" class="h-btn">Contact me</a>
-        <a class="menu-icon ps-3 pe-1 d-md-none"><i class="ri-menu-line mt-1"></i></a>
+      <div class="top-btn pe-2 pe-sm-5 d-flex justify-content-between ">
+        <a href="#contact" class="h-btn ">Contact me</a>
+        <a class="menu-icon ps-3 pe-4 d-md-none"><i class="ri-menu-line mt-1"></i></a>
       </div>
 
       
@@ -41,7 +44,7 @@
 
     <div class="slider">
 
-      <ul class="navbar d-flex flex-column d-md-none pt-5">
+      <ul class="navbar flex-column d-md-none pt-5">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -53,7 +56,7 @@
     <!---hero section-->
     <section class="hero col-12" id="home">
       <div class="overlay d-block d-lg-none col-12"></div>
-      <div class="main-content col-md-6 col-12 d-flex flex-column align-items-center justify-content-center ps-md-5 ">
+      <div class="main-content col-md-6 col-12 d-flex flex-column align-items-center justify-content-center ps-md-5 " data-aos="zoom-in-right" >
         <div class="text-content ps-5">
           <h4>Hi, There!</h4>
           <h1>I'm <span>Amit Stredz...</span></h1>
@@ -69,47 +72,46 @@
             <a href="../img/resume.pdf" target="_blank" class=" btn2">Download CV</a>
           </div>
         </div>
-        <div class="photo"><img src="../img/profile.png" alt="" /></div>
+        <!-- <div class="photo d-flex justify-content-end "><img src="../img/profile.png" alt="" /></div> -->
       </div>
       
     </section>
   </div>
 
     <!---about-->
-    <section class="about" id="about">
-      <div class="about-head">
+    <section class="about col-12" id="about">
+      <div class="about-head" data-aos="fade-up">
         <h4>About <span>Me</span></h4>
       </div>
 
-      <div class="about-content">
-        <div class="about_wrapper col-12 row">
-        <div class="about-img col-6 col-md-3">
-          <img src="../img/profile.jpg">
-        </div>
-        <div class="about-text col-6">
-          <h2>I am a Sketch <span>Artist</span> <br> & a Web Developer</h2>
-          <div class="exp-area">
-            <p class="exp">Experience<span> 1 Years</span></p>
-            <p class="exp">Skills<span> Sketching, Calligraphy, Web Development, Editing</span></p>
-            <p class="exp">Address<span> ER3 @ TKMCE, Kollam, Kerala, India</span><a href="#"><i class="ri-map-pin-2-line"></i></a></p>
-            <p class="exp">Email<span> ponnan2112@gmail.com</span> <a href="#"><i class="ri-mail-line"></i></a></p>
-            <p href="#" class="exp">Phone<span> 9567502380</span> <a href="#"><i class="ri-phone-fill"></i></a></p>
-          </div>
-          <a href="#portfolio" class="h-btn">View All Projects</a>
-        </div>
-      </div>
+      <div class="about-content col-12 row ">
+              <div class="about-img d-flex justify-content-center col-sm-6 justify-content-md-end " data-aos="zoom-in-right">
+                <img src="../img/profile.jpg">
+              </div>
+              <div class="about-text ps-5 col-sm-6 col-9" data-aos="zoom-in-left">
+                  <h2>I am a Sketch <span>Artist</span> <br> & a Web Developer</h2>
+                  <div class="exp-area">
+                    <p class="exp">Experience<span> 1 Years</span></p>
+                    <!-- <p class="exp">Skills<span> Sketching, Calligraphy, Web Development, Editing</span></p> -->
+                    <p class="exp">Address<span> ER3 @ TKMCE, Kollam, Kerala, India</span><a href="#"><i class="ri-map-pin-2-line ps-2"></i></a></p>
+                    <p class="exp">Email<span> ponnan2112@gmail.com</span> <a href="#"><i class="ri-mail-line ps-2"></i></a></p>
+                    <p href="#" class="exp">Phone<span> 9567502380</span> <a href="#"><i class="ri-phone-fill ps-2"></i></a></p>
+                  </div>
+                  <a href="#portfolio" class="h-btn">View All Projects</a>
+              </div>
+            
       </div>
 
     </section>
 
     <!---services-->
-    <section class="services col-12" id="services">
-      <div class="ser-head">
+    <section class="services" id="services">
+      <div class="ser-head" data-aos="fade-up">
         <h4>My <span>Services</span></h4>
       </div>
       <div class="ser-content ">
 
-        <div class="ser-box ser-box5">
+        <div class="ser-box ser-box5" data-aos="fade-in">
           <img src="../img/web.jpg" alt="">
           <h3>Web<span> Development</span></h3>
           <p>Design/modify your website with unlimited revisions.</p>
@@ -118,7 +120,7 @@
           </a>
         </div>
         
-        <div class="ser-box  ser-box1">
+        <div class="ser-box  ser-box1" data-aos="fade-in">
           <img src="../img/ps.png" alt="">
           <h3>Photo<span> Editing</span></h3>
           <p>Custom photoshop your favourite photos.</p>
@@ -127,7 +129,7 @@
           </a>
         </div>
         
-        <div class="ser-box ser-box2">
+        <div class="ser-box ser-box2" data-aos="fade-in">
           <img src="../img/ae.png" alt="">
           <h3>Video <span> Editing</span></h3>
           <p>Custom edit your videos like a Pro.</p>
@@ -137,7 +139,7 @@
         </div>
         
 
-        <div class="ser-box ser-box3">
+        <div class="ser-box ser-box3" data-aos="fade-in">
           <div class="sketch"><img src="../img/sketch.png" alt=""></div>          
           <h3>Portrait <span> Sketching</span></h3>
           <p>Convert your memorable photos into pencil art. </p>
@@ -146,7 +148,7 @@
           </a>
         </div>
 
-        <div class="ser-box ser-box4">
+        <div class="ser-box ser-box4" data-aos="fade-in">
           <img src="../img/caligraphy.jpg" alt="">
           <h3>Caligraphy <span> Writing</span></h3>
           <p>Want to write something more unique...U r at the right place</p>
@@ -155,8 +157,8 @@
           </a>
         </div>        
         
-        <div class="ser-box ser-box6">
-          <img src="../img/speaker.jpg" alt="">
+        <div class="ser-box ser-box6" data-aos="fade-in">
+          <img src="../speaker/1.jpg" alt="">
           <h3>Custom-made<span> speakers</span></h3>
           <p>Make your music listening experience more thrilling.</p>
           <a href="#">Know more...
@@ -170,13 +172,12 @@
     <!---Portfolio-->
 
     <section class="portfolio" id="portfolio">
-      <div class="port-head">
+      <div class="port-head" data-aos="fade-up">
         <h4>My <span>Portfolio</span></h4>
       </div>
 
-      <div class="port_section ">
-
-            <div class="port-box port-one d-flex flex-column flex-md-row col-12">
+      <div class="port_section col-12" data-aos="fade-right">
+            <div class="port-box port-one col-12 gap-3">
               <div class="port-text text1  ">
                 <a href="https://www.google.com/" target="_blank"><h2>Bluetooth Speaker</h2></a>
                 <p>Custom made 40W Bluetoth speaker</p>
@@ -184,7 +185,7 @@
               <img src="speaker/1.jpg" alt="">
             </div>
 
-            <div class="port-box port-two  d-flex flex-column flex-md-row col-12">
+            <div class="port-box port-two col-12 gap-3" data-aos="fade-left">
               <img src="gimbal/4.jpg" alt="">        
               <div class="port-text text2">
                 <a href="https://www.google.com/" target="_blank"><h2>Gimbal</h2></a>
@@ -249,26 +250,24 @@
 
     <section class="contact" id="contact">
 
-      <div class="contact-head">
+      <div class="contact-head mb-5 mb-md-0" data-aos="fade-up">
         <h4>Connect<span> With Me</span></h4>
       </div>
       
-      <div class="contact-details">
-        <p class="exp">Address<span> ER3 @ TKMCE, Kollam, Kerala, India</span><a href="#"><i class="ri-map-pin-2-line"></i></a></p>
-        <p class="exp">Email<span> ponnan2112@gmail.com</span> <a href="#"><i class="ri-mail-line"></i></a></p>
-        <p href="#" class="exp">Phone<span> 9567502380</span> <a href="#"><i class="ri-phone-fill"></i></a></p>
+      <div class="contact-details d-flex align-items-center flex-column d-md-flex flex-md-row col-11 pt-md-5 pb-md-5" data-aos="zoom-in">
+        <p class="exp ps-5">Address<span> ER3 @ TKMCE, Kollam, Kerala, India</span><a href="#"><i class="ri-map-pin-2-line"></i></a></p>
+        <p class="exp ps-5">Email<span> ponnan2112@gmail.com</span> <a href="#"><i class="ri-mail-line"></i></a></p>
+        <p href="#" class="exp ps-5">Phone<span> 9567502380</span> <a href="#"><i class="ri-phone-fill"></i></a></p>
       </div>
-    </div>
-    
+      
       <div class="contact-box">
-        <div class="contact-form">
-          <form action="">
+        <div class="contact-form d-flex flex-column col-md-6" data-aos="fade-up">
             <input type="name" placeholder="Your name" required>
             <input type="email" placeholder="Email Address" required>
             <textarea name="" id="" cols="30" rows="10" placeholder="Write your message here" required></textarea>
-            <input type="submit" name="" value="Send Message" class="send-btn">
-          </form>
+            <button type="submit" name=""class="send-btn">Send Message</button>
         </div>
+      </div>
 
 
     </section>
@@ -276,10 +275,19 @@
 
     <footer class="footer">
 
-      <div class="copyright">
+      <div class="copyright ">
         <p>Copyright All Rights Reserved <i class="ri-copyright-line"></i></p>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        offset: 50,
+        duration: 500
+      });
+    </script>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

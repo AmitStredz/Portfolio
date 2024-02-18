@@ -1,13 +1,13 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Kode Mono", monospace;
     /* font-family: 'Pacifico', cursive ; */
     scroll-behavior: smooth;
     /* overflow-x: hidden; */
 }
 *{
-    box-sizing:unset !important;
+    box-sizing:border-box;
 }
 :root{
     --text-color: #f8c4c4;
@@ -18,7 +18,7 @@
     /* --main-color: #a0e28c; */
     --main-color: rgb(236, 62, 62);
     --other-color: #c3cad5;
-    --font:'Pacifico', cursive;
+    --font:"Kode Mono", monospace;
     --bs-heading-color:#f8c4c4 !important ;
     --h1-font: 4.5rem;
     --h2-font: 2.9rem;
@@ -48,11 +48,9 @@ body a{
     height: 100vh;
     width: 300px;
     transition: all .5s ease-in-out;
-    
 }
-.active{
-    left: 0px;
-    
+.slider.active{
+    left: 0px;    
 }
 li{
     list-style: none;
@@ -67,7 +65,9 @@ li{
 }
 header{
     position: fixed;
-    /* width: 100px; */
+    width: 100%;
+    /* max-width: 500px; */
+    overflow-x: hidden;
     /* height: 100px; */
     /* z-index: 1000; */
     left: 0;
@@ -92,6 +92,22 @@ header{
     color: var(--text-color);
     font-weight: 600;
 }
+@media (max-width: 500px){
+    #navbar .logo{
+        /* padding: 30px 0px 40px 30px; */
+        font-size: 1.5rem;
+    }
+    #navbar .h-btn{
+        padding: 5px 10px;
+
+    }
+    .menu-icon{
+        padding-top: 5px;
+    }
+    .menu-icon i{
+        font-size: 20px !important;
+    }
+}
 span{
     color: var(--main-color);
 }
@@ -111,9 +127,9 @@ span{
     text-align: center;
     gap: 30px;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     
-}
+} */
 .navbar a{
     font-size: 15px ;
     font-weight: 1000;
@@ -143,7 +159,7 @@ span{
     color: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 2vh;
     font-weight: 600;
     transition: all 300ms ease;
     z-index: 10000;
@@ -160,14 +176,15 @@ section{
 }
 .hero {
     height: 100vh;
-    width: 100%;
+    /* width: 100%; */
     align-items: center;
     justify-content: flex-start;
     display: flex;
-    /* background: url(img/profile.png); */
-    /* background-repeat: no-repeat;
+    background: url(img/profile.png);
+    background-repeat: no-repeat;
     background-size: 700px;
-    background-position: right 0px ; */
+    background-position: right 0px ;
+    overflow-x: hidden !important;
 }
 .overlay{
     position: absolute;
@@ -176,28 +193,45 @@ section{
     height: 100%;
     z-index: 10000;
 }
-.photo{
-    width: 700px;
+@media (max-width:768px) {
+    .hero{
+        background-position: bottom right 10px;
+        background-size: 90vh;
+    }
+    .overlay{
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* .photo{
+    width: 100%;
     position: absolute;
+
     right: 0;
     bottom: 0;
-    z-index: -10000;
+    z-index: -10000;   
+    overflow-x: hidden !important; 
 }
 .photo img{
-    width: 100%;
+    bottom: 0;
+    width: 100vh;
     z-index:-10000;
-}
+    overflow-x: hidden !important;
+} */
+
+
 
 .main-content{
     display: flex;
     align-items: center;
+    z-index: 1000000;
 }
 .main-content h4{
     font-size: 1.6rem;
 }
 .main-content h1{
-    width: 500px;
-    font-size: 3.5rem;
+    /* width: 500px; */
+    font-size: 3rem;
     font-weight: 900;
     line-height: 1.2;
 }
@@ -244,13 +278,16 @@ section{
     color:  var(--text-color);
     margin-top: 15px;
 }
-.btns, .ser-box a, .send-btn{
+.btns{
     margin-right: 40px;
+}
+.btns, .ser-box a, .send-btn{
     border: 0.8px solid var(--main-color);
     border-radius: 6px;
     color: var(--bg-color);
     background:var(--main-color);
     padding: 6px 10px;
+
     display: inline-block;
     font-weight: 600;
     transition: all 300ms ease;
@@ -287,39 +324,71 @@ section{
     justify-content: center;
 }
 .about_wrapper{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    width: fit-content;
-    justify-content: center;
-    gap: 1.5rem;
-
-
+    justify-content: center; */
+    /* gap: 1.5rem; */
 }
 .about-img{
-    width: 30%;
+    width: 100%;
+    /* height: 10px; */
     /* margin-left: 100px; */
+    /* overflow-x: hidden; */
 }
 .about-img img{
-    width: 100%;
+    width: 40vh;
     background: rgb(33, 31, 31);
-
-    padding: 3px;
     border: 3px solid var(--main-color);
     border-radius: 50%;
     box-shadow: 0 0 20px var(--main-color);
 }
+@media (min-width: 768px){
+    .about-img{
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-img img{
+        /* width: 50vh; */
+    }
+    .about-text{
+        margin: 0 auto;
+    }
+}
+@media (min-width: 576px){
+    .about-img{
+        width: 20%; 
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 576px){
+    .about-text h2{
+        font-size: 1.5rem !important;
+    }
+    .about-text p{
+        font-size: 0.8rem !important;
+    }
+    .about-text .h-btn{
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+}
 .about-text{
-    margin-top: 0px;
+    padding-top: 10vh !important;
     padding: 0px;
     /* margin-right: 300px; */
-    width: fit-content;
 }
 .about-text a{
     margin-top: 20px;
 }
 .about-text h2{
-    font-size: 2rem;
-    
+    font-size: 2rem; 
+}
+@media (max-width: 500px){
+    .about-text h2{
+        font-size: 1.2rem !important; 
+    }
 }
 .exp-area{
     margin-left: 0px;
@@ -329,9 +398,9 @@ section{
     margin-top: 20px;
 }
 .exp-area i{
-    margin-right: 30px;
+    /* margin-right: 30px; */
     color: var(--text-color);
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 .exp-area span{
     margin-left: 5px;
@@ -343,7 +412,7 @@ header.sticky{
 }
 .services{
     width: 100%;
-    padding: 10px;
+    padding-top: 1px;
 }
 .ser-head h4, .port-head h4, .about-head h4{
     text-align: center;
@@ -357,7 +426,7 @@ header.sticky{
     align-items:center ;
     gap: 2.3rem;
     margin-top: 80px;
-    padding: 0px 150px 50px 150px;
+    padding: 0px 10% 50px 10%;
     transition: all 300ms ease-out;
 }
 .ser-box{
@@ -369,10 +438,10 @@ header.sticky{
     border-radius: 20px;
     border: 1px solid transparent;
     box-shadow: 0 0 5px var(--main-color);
-    width: 80%;
+    /* width: 100%; */
     transition: 700ms;
-    max-height: 300px;
-    min-height: 300px;
+    /* max-height: 300px;
+    min-height: 300px; */
 }
 /* .ser-box1{
     background: url(../img/ps-back.png) center; 
@@ -404,9 +473,7 @@ header.sticky{
     transition: 400ms;
     box-shadow: 0 0 20px var(--main-color);
 }
-.sketch{
-    min-height: 195px;
-}
+
 .ser-box img{
     margin-bottom: 15%;
     margin-left: -20px;
@@ -425,7 +492,7 @@ header.sticky{
 
 }
 .ser-box h3{
-    font-size:25px;
+    font-size: 3vh;
 }
 .ser-box p{
     margin-top: 3%;
@@ -442,8 +509,8 @@ header.sticky{
     padding: 1px 10% 100px 10%;
     /* gap: 20px; */
     /* height: 1000px; */
-
 }
+
 .port-head{
     margin-bottom: 80px;
 }
@@ -472,9 +539,6 @@ header.sticky{
     color: var(--text-color);
     font-size: 25px;
     font-weight: bold;
-}
-.port-text{
-    margin-left: 20px
 }
 .port-box p{
     color: rgba(255, 0, 0, 0.586);
@@ -506,7 +570,34 @@ header.sticky{
     grid-row-start: 2;
     grid-row-end: 5;
 }
-.port-three{
+@media (max-width: 700px){
+    .port_section{
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+        grid-template-rows: repeat(6, 15vw);
+        grid-gap: 10px;
+    }
+    .port-one{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        overflow-x: hidden !important;
+    }
+    .port-two{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    }
+    .port-text h2{
+        font-size: 1.2rem;
+    }
+    .port-text p{
+        font-size: 0.8rem;
+    }
+}
+/* .port-three{
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 1;
@@ -535,33 +626,31 @@ header.sticky{
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-}
+} */
 
 .contact-head h4{
     font-size: var(--h2-font);
     text-align: center;
-    /* margin-bottom: 100px; */
+    padding-top: 90px;
 }
 
 .contact-details{
     display: flex;
-    margin: 50px;
     justify-content: center;
-    gap: 40px;
+    /* gap: 40px; */
     font-size: 14px;
+    /* padding-left: 30vh; */
 }
 
+
 .contact-form{
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    display: flex;
+    width: 85%;
+    margin: 0 auto;
 }
-.contact-form form{
-    position: relative;
-    width: 500px;
-}
-form input, form textarea{
-    width: 100%;
+.contact-form input, .contact-form textarea{
+    width:  100% ;
     padding: 20px;
     border: none;
     outline: none;
@@ -572,28 +661,64 @@ form input, form textarea{
     border-radius: 10px;
     margin-bottom: 20px;
 }
-form input::placeholder, form textarea::placeholder{
+.contact-form input::placeholder, .contact-form textarea::placeholder{
     color: var(--text-color);
     font-size: 13px;
 }
 
-form input:focus::placeholder,form textarea:focus::placeholder{
+.contact-form input:focus::placeholder,.contact-form textarea:focus::placeholder{
     color: transparent;
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease;
 }
 .send-btn{
-    width: 25%;
+    width: 150px;
+}
+/* @media (max-width: 500px){
+    .contact-form input, .contact-form textarea{
+        max-width:47vh;
+    }
+    
+    .send-btn{
     font-size: var(--font);
     cursor: pointer;
-}
+} */
 .footer{
     background-color: rgba(9, 9, 9, 0.2);
     height: 20px;
     padding: 5px;
+    margin-top: 20px;
 }
 .copyright{
     text-align: center;
     font-size: 12px;
     /* margin: 10px 0px 10px 0px; */
-
+}
+@media (max-width: 500px){
+    .footer{
+        padding: 8px;
+    }
+    .copyright{
+        font-size: 10px;
+    }
+    :root{
+        --h2-font: 2rem;
+    }
+    .contact-details p{
+        font-size: 0.75rem !important;
+    }
+    .ser-box h3{
+        font-size: 2.9vh;
+    }
+    .ser-box p{
+        font-size: 2vh;
+    }
+    .main-content h1{
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 900;
+        line-height: 1.2;
+    }
+    .main-content{
+        margin-left: -20px;
+    }
 }
