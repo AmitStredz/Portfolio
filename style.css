@@ -77,7 +77,7 @@ header{
     justify-content: space-between;
     padding: 40px 0px;
     background: transparent;
-    transition: all 500ms ease;
+    transition: all 500ms ease !important;
     list-style: none;
     background-color: transparent;
     z-index: 100000000;
@@ -92,22 +92,7 @@ header{
     color: var(--text-color);
     font-weight: 600;
 }
-@media (max-width: 500px){
-    #navbar .logo{
-        /* padding: 30px 0px 40px 30px; */
-        font-size: 1.5rem;
-    }
-    #navbar .h-btn{
-        padding: 5px 10px;
 
-    }
-    .menu-icon{
-        padding-top: 5px;
-    }
-    .menu-icon i{
-        font-size: 20px !important;
-    }
-}
 span{
     color: var(--main-color);
 }
@@ -127,9 +112,7 @@ span{
     text-align: center;
     gap: 30px;
 }
-/* @media (max-width: 768px) {
-    
-} */
+
 .navbar a{
     font-size: 15px ;
     font-weight: 1000;
@@ -193,15 +176,7 @@ section{
     height: 100%;
     z-index: 10000;
 }
-@media (max-width:768px) {
-    .hero{
-        background-position: bottom right 10px;
-        background-size: 90vh;
-    }
-    .overlay{
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-}
+
 
 /* .photo{
     width: 100%;
@@ -342,38 +317,7 @@ section{
     border-radius: 50%;
     box-shadow: 0 0 20px var(--main-color);
 }
-@media (min-width: 768px){
-    .about-img{
-        width: 80%;
-        justify-content: center;
-        align-items: center;
-    }
-    .about-img img{
-        /* width: 50vh; */
-    }
-    .about-text{
-        margin: 0 auto;
-    }
-}
-@media (min-width: 576px){
-    .about-img{
-        width: 20%; 
-        justify-content: center;
-        align-items: center;
-    }
-}
-@media (max-width: 576px){
-    .about-text h2{
-        font-size: 1.5rem !important;
-    }
-    .about-text p{
-        font-size: 0.8rem !important;
-    }
-    .about-text .h-btn{
-        font-size: 0.7rem;
-        padding: 10px;
-    }
-}
+
 .about-text{
     padding-top: 10vh !important;
     padding: 0px;
@@ -385,11 +329,7 @@ section{
 .about-text h2{
     font-size: 2rem; 
 }
-@media (max-width: 500px){
-    .about-text h2{
-        font-size: 1.2rem !important; 
-    }
-}
+
 .exp-area{
     margin-left: 0px;
     justify-content: flex-start;
@@ -570,33 +510,7 @@ header.sticky{
     grid-row-start: 2;
     grid-row-end: 5;
 }
-@media (max-width: 700px){
-    .port_section{
-        display: grid;
-        grid-template-columns: repeat(2, 3fr);
-        grid-template-rows: repeat(6, 15vw);
-        grid-gap: 10px;
-    }
-    .port-one{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 4;
-        overflow-x: hidden !important;
-    }
-    .port-two{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 7;
-    }
-    .port-text h2{
-        font-size: 1.2rem;
-    }
-    .port-text p{
-        font-size: 0.8rem;
-    }
-}
+
 /* .port-three{
     grid-column-start: 4;
     grid-column-end: 5;
@@ -673,15 +587,6 @@ header.sticky{
 .send-btn{
     width: 150px;
 }
-/* @media (max-width: 500px){
-    .contact-form input, .contact-form textarea{
-        max-width:47vh;
-    }
-    
-    .send-btn{
-    font-size: var(--font);
-    cursor: pointer;
-} */
 .footer{
     background-color: rgba(9, 9, 9, 0.2);
     height: 20px;
@@ -694,6 +599,21 @@ header.sticky{
     /* margin: 10px 0px 10px 0px; */
 }
 @media (max-width: 500px){
+    #navbar .logo{
+        /* padding: 30px 0px 40px 30px; */
+        font-size: 1.5rem;
+    }
+    #navbar .h-btn{
+        padding: 5px 10px;
+
+    }
+    .menu-icon{
+        padding-top: 5px;
+    }
+    .menu-icon i{
+        font-size: 20px !important;
+    }
+
     .footer{
         padding: 8px;
     }
@@ -720,5 +640,77 @@ header.sticky{
     }
     .main-content{
         margin-left: -20px;
+    }
+    .about-text h2{
+        font-size: 1.2rem !important; 
+    }
+}
+
+@media (max-width: 700px){
+    .port_section{
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+        grid-template-rows: repeat(6, 15vw);
+        grid-gap: 10px;
+    }
+    .port-one{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        overflow-x: hidden !important;
+    }
+    .port-two{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 7;
+    }
+    .port-text h2{
+        font-size: 1.2rem;
+    }
+    .port-text p{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:768px) {
+    .hero{
+        background-position: bottom right 10px;
+        background-size: 90vh;
+    }
+    .overlay{
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+@media (min-width: 768px){
+    .about-img{
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-img img{
+        /* width: 50vh; */
+    }
+    .about-text{
+        margin: 0 auto;
+    }
+}
+@media (min-width: 576px){
+    .about-img{
+        width: 20%; 
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 576px){
+    .about-text h2{
+        font-size: 1.5rem !important;
+    }
+    .about-text p{
+        font-size: 0.8rem !important;
+    }
+    .about-text .h-btn{
+        font-size: 0.7rem;
+        padding: 10px;
     }
 }
