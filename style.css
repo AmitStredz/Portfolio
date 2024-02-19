@@ -605,7 +605,6 @@ header.sticky{
     }
     #navbar .h-btn{
         padding: 5px 10px;
-
     }
     .menu-icon{
         padding-top: 5px;
@@ -688,9 +687,6 @@ header.sticky{
         justify-content: center;
         align-items: center;
     }
-    .about-img img{
-        /* width: 50vh; */
-    }
     .about-text{
         margin: 0 auto;
     }
@@ -712,5 +708,10 @@ header.sticky{
     .about-text .h-btn{
         font-size: 0.7rem;
         padding: 10px;
+    }
+}
+@media (max-width: 350px){
+    #navbar .h-btn{
+        padding: 3px 7px;
     }
 }
