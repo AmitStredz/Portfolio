@@ -674,8 +674,8 @@ header.sticky{
 }
 @media (max-width:768px) {
     .hero{
-        background-position: bottom right 10px;
-        background-size: 90vh;
+        background-position: bottom right 100px;
+        background-size: 60vh;
     }
     .overlay{
         background-color: rgba(0, 0, 0, 0.7);
