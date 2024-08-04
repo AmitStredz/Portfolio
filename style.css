@@ -674,6 +674,7 @@ header.sticky{
 }
 @media (max-width:768px) {
     .hero{
+        background-image: none;
         background-position: bottom right 100px;
         background-size: 60vh;
     }
