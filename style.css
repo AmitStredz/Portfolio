@@ -165,7 +165,7 @@ section{
     display: flex;
     background: url(img/profile.png);
     background-repeat: no-repeat;
-    background-size: 700px;
+    background-size: 500px;
     background-position: right 0px ;
     overflow-x: hidden !important;
 }
