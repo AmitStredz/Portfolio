@@ -24,7 +24,7 @@
     --h2-font: 2.9rem;
     --p-font: 1rem;
 }
-body{
+body{"Kode Mono", monospace
     color: var(--text-color);
     background-color: var(--bg-color) !important;
     overflow-x: hidden;
